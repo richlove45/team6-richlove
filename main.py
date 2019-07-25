@@ -17,9 +17,9 @@ class MainHandler(webapp2.RequestHandler):
     welcome_template = the_jinja_env.get_template('templates/hotels.html')
     self.response.write(welcome_template.render())  # the response
 
-
 # the app configuration section	
 app = webapp2.WSGIApplication([
   #('/', MainPage),
   ('/', MainHandler),
+  ('/China', ChinaHandler)
   ], debug=True)
