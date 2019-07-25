@@ -9,13 +9,13 @@ the_jinja_env = jinja2.Environment(
   loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
   extensions=['jinja2.ext.autoescape'],
   autoescape=True)
-
 # other functions should go above the handlers or in a separate file
 
 # the handler section
 class MainHandler(webapp2.RequestHandler):
   def get(self):  # for a get request
-    self.response.write('Greetings')  # the response
+    welcome_template = the_jinja_env.get_template('templates/hotels.html')
+    self.response.write(welcome_template.render())  # the response
 
 
 # the app configuration section	

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The grid: Three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 20%;
+  padding: 45px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  border:1px solid black;
+  white-space: none;
+}
+
+.containerTab {
+  padding: 15px;
+  color: black;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Closable button inside the container tab */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+#ven{
+font-size:19.75px;
+}
+#us{
+font-size:19.75px
+}
+#uk{
+  font-size: 19.75px;
+}
+</style>
+</head>
+<body>
+
+<div style="text-align:center">
+  <h2>Fun Facts of Countries from North America to Africa</h2>
+  <p>Click on the boxes below to find descriptions about each: Please scroll down to see info</p>
+</div>
+
+<!-- twenty-nine columns -->
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:green;">
+    Canada🇨🇦
+  </div>
+  <div id="us"class="column" onclick="openTab('b2');" style="background:blue;">
+    United States🇺🇸
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:red;">
+    Mexico🇲🇽
+  </div>
+  <div class="column" onclick="openTab('b4');" style="background:yellow;">
+    Jamaica🇯🇲
+  </div>
+  <div class="column" onclick="openTab('b5');" style="background:purple;">
+   Bolivia🇧🇴
+  </div>
+  <div id="ven" class="column" onclick="openTab('b6');" style="background:pink;">
+    Venezuela 🇻🇪
+  </div>
+  <div class="column" onclick="openTab('b7');" style="background:lavender;">
+   Colombia 🇨🇴
+  </div>
+  <div class="column" onclick="openTab('b8');" style="background:#0E5255;">
+    Perù 🇵🇪
+  </div>
+  <div class="column" onclick="openTab('b9');" style="background:orange;">
+    Argentina 🇦🇷
+  </div>
+  <div class="column" onclick="openTab('b10');" style="background:#B8A007;">
+    Brazil 🇧🇷
+  </div>
+
+  <div class="column" onclick="openTab('b11');" style="background:#66D30B;">
+    France 🇫🇷</div>
+
+    <div class="column" onclick="openTab('b12');" style="background:#11ADE3;">
+    Italy 🇮🇹</div>
+
+     <div class="column" onclick="openTab('b13');" style="background:#032247;">
+    Greece 🇬🇷</div>
+
+     <div class="column" onclick="openTab('b14');" style="background:#C443C0;">
+    Austria 🇦🇹</div>
+
+     <div class="column" onclick="openTab('b15');" style="background:#8A1A24;">
+    Spain 🇪🇸</div>
+
+     <div id="uk"class="column" onclick="openTab('b16');" style="background:#3C50E1;">
+    United Kingdom 🇬🇧</div>
+
+     <div class="column" onclick="openTab('b17');" style="background:#03106C;">
+    China 🇨🇳</div>
+
+     <div class="column" onclick="openTab('b18');" style="background:#10D4A4;">
+    India 🇮🇳</div>
+
+     <div class="column" onclick="openTab('b19');" style="background:#49813C;">
+    Japan 🇯🇵</div>
+
+     <div class="column" onclick="openTab('b20');" style="background:#9D2E96;">
+    Turkey 🇹🇷</div>
+
+     <div class="column" onclick="openTab('b21');" style="background:#ab91ff;">
+    Thailand 🇹🇭</div>
+
+     <div class="column" onclick="openTab('b22');" style="background:#11ADE3  ;">
+    Saudi Arabia 🇸🇦</div>
+
+     <div class="column" onclick="openTab('b23');" style="background:#BA8FF4  ;">
+    Ghana 🇬🇭</div>
+
+     <div class="column" onclick="openTab('b24');" style="background:#FF85B7  ;">
+    Mali 🇲🇱</div>
+
+    <div class="column" onclick="openTab('b25');" style="background:#FF0067 ;">
+    South Africa 🇿🇦</div>
+
+    <div class="column" onclick="openTab('b26');" style="background:#5EFF52  ;">
+    Kenya 🇰🇪</div>
+
+    <div class="column" onclick="openTab('b27');" style="background:#006DC2  ;">
+    Nigeria 🇳🇬</div>
+
+    <div class="column" onclick="openTab('b28');" style="background:#79C4FF ;">
+    Ethiopia 🇪🇹</div>
+
+    <div class="column" onclick="openTab('b29');" style="background:#DFFF79    ;">
+    Congo 🇨🇩</div>
+
+    <div class="column" onclick="openTab('b30');" style="background:#FFABFA    ;">
+    Australia 🇦🇺</div>
+   
+
+</div>
+
+<!-- Full-width columns: (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:green">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Canada</h2>
+  <p>Canada is a country in the Northern part of Northern America. The capital of Canada is Ottawa, and the language spoken in Canada is English and French. Canada makes the worlds second largest country by total area.</p>
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:blue">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>United States</h2>
+  <p>United States is a country in the North America. The capitol of the U.S is Washington D.C. The United States is known as a melting pot with its diverse cultures and traditions.</p>
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:red">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Mexico</h2>
+  <p>Mexico is a country between the  U.S and Central America. Its known for its Pacific and Gulf of Mexico beaches and its diverse landscape of mountains, deserts, and jungles. The Capital of Mexico is Mexico City, and its a Spanish speaking Country.</p>
+</div>
+
+<div id="b4" class="containerTab" style="display:none;background:yellow">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Jamaica</h2>
+  <p>Jamaica is a Caribbean Island nation located in North America. It has lush mountains, and ref-lined beaches. Its known for being the birthplace of reggae music. The Capital of Jamaica is Kingston, and Patois is the language spoken.</p>
+</div>
+
+<div id="b5" class="containerTab" style="display:none;background:purple">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Bolivia</h2>
+  <p>Bolivia is a country in central South America, with a varied terrain spanning Andes Mountains, the Atacama Desert and Amazon Basin rainforest.The Capital is Sucre and the languages spoken are Spanish, Aymara, Paraguayan Guaraní, and many more.</p>
+</div>
+
+<div id="b6" class="containerTab" style="display:none;background:pink">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Venezuela</h2>
+  <p>Venezuela is a country on the Northern side of South America. It has diverse natural attractions such as the Andes Mountains and the tropical resort islands. The capital is Caracas. The language spoken is Spanish.</p>
+</div>
+
+<div id="b7" class="containerTab" style="display:none;background:lavender">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Colombia</h2>
+  <p>Colombia is a country on the northwest of South America. It shares boarders to the West with Panama, east with Brazil, and south with Ecuador and Peru. Spanish and English is the language spoken in Columbia.</p>
+</div>
+
+<div id="b8" class="containerTab" style="display:none;background:#0E5255">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Peru</h2>
+  <p>Peru is a country in the South America thats home to a section of Amazon rainforest and Machu Pichu an ancient Incan city high in the Andes Mountains. The Capital is Lima and Quecha is the language spoken in Peru.
+</p>
+</div>
+
+<div id="b9" class="containerTab" style="display:none;background:orange">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Argentina</h2>
+  <p>Argentina is a country located in the southern half of South America, officially being Argentine Republic. The Capital is Buenos Aires. Spanish is the official language spoken in Argentina.</p>
+</div>
+
+<div id="b10" class="containerTab" style="display:none;background:red">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Mexico</h2>
+  <p>Mexico is a country between the  U.S and Central America. Its known for its Pacific and Gulf of Mexico beaches and its diverse landscape of mountains, deserts, and jungles. The Capital of Mexico is Mexico City, and its a Spanish speaking Country.</p>
+</div>
+
+<div id="b11" class="containerTab" style="display:none;background:#66D30B">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>France</h2>
+  <p>France is located in Western Europe. It encompasses medieval cities, alpine villages and Mediterranean beaches. Paris, is its capital, is famed for its fashion houses, classical art museums including the Louvre and monuments like the Eiffel Tower. The Capital of France is Paris and the language spoken in France is French.</p>
+</div>
+
+<div id="b12" class="containerTab" style="display:none;background:#11ADE3">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Italy</h2>
+  <p>It's proper name Repubblica Italiana (Italian Republic), Nickname: “Bel Paese” which means beautiful country.Rome its capital city was founded in 753BC.Rome its capital city was founded in 753BC.Italian and English is the language spoken in Italy.</p>
+</div>
+
+<div id="b13" class="containerTab" style="display:none;background:#032247">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Greece</h2>
+  <p> Greece, officially the Hellenic Republic (Greek: Ελληνική Δημοκρατία), also known as Hellas (Greek: Ελλάς), is a country located in Southern and Southeast Europe, with a population of approximately 11 million as of 2016. Athens is the nation's capital and largest city, followed by Thessaloniki. Greece is located at the crossroads of Europe, Asia, and Africa. Situated on the southern tip of the Balkan Peninsula, it shares land borders with Albania to the northwest, North Macedonia and Bulgaria to the north, and Turkey to the northeast. The Aegean Sea lies to the east of the mainland, the Ionian Sea to the west, the Cretan Sea and the Mediterranean Sea to the south. Greece has the longest coastline on the Mediterranean Basin and the 11th longest coastline in the world at 13,676 km (8,498 mi) in length, featuring a large number of islands, of which 227 are inhabited. Eighty percent of Greece is mountainous, with Mount Olympus being the highest peak at 2,918 metres (9,573 ft). The country consists of nine geographic regions: Macedonia, Central Greece, the Peloponnese, Thessaly, Epirus, the Aegean Islands (including the Dodecanese and Cyclades), Thrace, Crete, and the Ionian Islands.</p>
+</div>
+
+<div id="b14" class="containerTab" style="display:none;background:#C443C0">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Austria</h2>
+  <p>Australia, officially the Commonwealth of Australia,[12] is a sovereign country comprising the mainland of the Australian continent, the island of Tasmania, and numerous smaller islands. It is the largest country in Oceania and the world's sixth-largest country by total area. The neighbouring countries are Papua New Guinea, Indonesia, and East Timor to the north; the Solomon Islands and Vanuatu to the north-east; and New Zealand to the south-east. The population of 25 million[6] is highly urbanised and heavily concentrated on the eastern seaboard.[13] Australia's capital is Canberra, and its largest city is Sydney. The country's other major metropolitan areas are Melbourne, Brisbane, Perth, and Adelaide.</p>
+</div>
+
+<div id="b15" class="containerTab" style="display:none;background:#8A1A24">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Spain</h2>
+  <p>Spain (Spanish: España, officially the Kingdom of Spain[11] (Spanish: Reino de España),[a][b] is a country mostly located in Europe. Its continental European territory is situated on the Iberian Peninsula. Its territory also includes two archipelagoes: the Canary Islands off the coast of Africa, and the Balearic Islands in the Mediterranean Sea. The African enclaves of Ceuta, Melilla, and Peñón de Vélez de la Gomera[12] make Spain the only European country to have a physical border with an African country (Morocco).[g] Several small islands in the Alboran Sea are also part of Spanish territory. The country's mainland is bordered to the south and east by the Mediterranean Sea except for a small land boundary with Gibraltar; to the north and northeast by France, Andorra, and the Bay of Biscay; and to the west and northwest by Portugal and the Atlantic Ocean.</p>
+</div>
+
+<div id="b16" class="containerTab" style="display:none;background:#3C50E1">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>United Kingdom</h2>
+  <p>The United Kingdom of Great Britain and Northern Ireland, commonly known as the United Kingdom (UK)[15] or Britain,[note 11] is a sovereign country located off the north-western coast of the European mainland. The United Kingdom includes the island of Great Britain, the north-eastern part of the island of Ireland, and many smaller islands.[16] Northern Ireland is the only part of the United Kingdom that shares a land border with another sovereign state, the Republic of Ireland. Apart from this land border, the United Kingdom is surrounded by the Atlantic Ocean, with the North Sea to the east, the English Channel to the south and the Celtic Sea to the south-west, giving it the 12th-longest coastline in the world. The Irish Sea lies between Great Britain and Ireland. The United Kingdom's 242,500 square kilometres (93,600 sq mi) were home to an estimated 66.0 million inhabitants in 2017.
+</p>
+</div>
+
+<div id="b17" class="containerTab" style="display:none;background:#03106C">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>China</h2>
+  <p>China (Chinese: 中国; pinyin: Zhōngguó; lit. "Middle Kingdom"), officially the People's Republic of China (PRC), is a country in East Asia and the world's most populous country, with a population of around 1.404 billion.[10] Covering approximately 9,600,000 square kilometers (3,700,000 sq mi), it is the third- or fourth-largest country by total area.[k][16] Governed by the Communist Party of China, the state exercises jurisdiction over 22 provinces, five autonomous regions, four direct-controlled municipalities (Beijing, Tianjin, Shanghai, and Chongqing), and the special administrative regions of Hong Kong and Macau.
+</p>
+</div>
+
+<div id="b18" class="containerTab" style="display:none;background:#10D4A4">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>India</h2>
+  <p>India (official name: the Republic of India;[e] Hindi: Bhārat Gaṇarājya) is a country in South Asia. It is the seventh-largest country by area, the second-most populous country, and the most populous democracy in the world. Bounded by the Indian Ocean on the south, the Arabian Sea on the southwest, and the Bay of Bengal on the southeast, it shares land borders with Pakistan to the west;[f] China, Nepal, and Bhutan to the north; and Bangladesh and Myanmar to the east. In the Indian Ocean, India is in the vicinity of Sri Lanka and the Maldives; its Andaman and Nicobar Islands share a maritime border with Thailand and Indonesia.</p>
+</div>
+
+<div id="b19" class="containerTab" style="display:none;background:#49813C">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Japan</h2>
+  <p>Japan (Japanese: 日本; Nippon [ɲippoɴ] or Nihon [ɲihoɴ]; formally 日本国 About this soundNippon-koku or Nihon-koku, lit. 'State of Japan') is an island country in East Asia. Located in the Pacific Ocean, it lies off the eastern coast of the Asian continent and stretches from the Sea of Okhotsk in the north to the East China Sea and the Philippine Sea in the south. The kanji that make up Japan's name mean 'sun origin', and it is often called the "Land of the Rising Sun". Japan is a stratovolcanic archipelago consisting of about 6,852 islands. The four largest are Honshu, Hokkaido, Kyushu, and Shikoku, which make up about ninety-seven percent of Japan's land area and often are referred to as home islands. The country is divided into 47 prefectures in eight regions, with Hokkaido being the northernmost prefecture and Okinawa being the southernmost one. Japan is the 2nd most populous island country. The population of 126 million (2019)[12] is the world's eleventh largest, of which 98.5% are ethnic Japanese. 90.7% of people live in cities, while 9.3% live in the countryside.[16] About 13.8 million people live in Tokyo,[17] the capital of Japan. The Greater Tokyo Area is the most populous metropolitan area in the world with over 38 million people.[18]</p>
+</div>
+
+<div id="b20" class="containerTab" style="display:none;background:#9D2E96">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Turkey</h2>
+  <p>Turkey (Turkish: Türkiye [ˈtyɾcije]), officially the Republic of Turkey (Turkish: Türkiye Cumhuriyeti [ˈtyɾcije dʒumˈhuɾijeti] (About this soundlisten)), is a transcontinental country located mainly in Western Asia, with a smaller portion on the Balkan Peninsula in Southeast Europe. East Thrace, located in Europe, is separated from Anatolia by the Sea of Marmara, the Bosphorous strait and the Dardanelles (collectively called the Turkish Straits).[7] Turkey is bordered by Greece and Bulgaria to its northwest; Georgia to its northeast; Armenia, the Azerbaijani exclave of Nakhchivan and Iran to the east; and Iraq and Syria to the south. Istanbul is the largest city, but more central Ankara is the capital. Approximately 70 to 80 per cent of the country's citizens identify as Turkish.[8][9] Kurds are the largest minority; the size of the Kurdish population is a subject of dispute with estimates placing the figure at anywhere from 12 to 25 per cent of the population.</p>
+</div>
+
+<div id="b21" class="containerTab" style="display:none;background:#ab91ff">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Thailand</h2>
+  <p>Thailand,[a] officially the Kingdom of Thailand and formerly known as Siam,[b] is a country at the centre of the Southeast Asian Indochinese peninsula composed of 76 provinces. At 513,120 km2 (198,120 sq mi) and over 68 million people, Thailand is the world's 50th largest country by total area and the 21st-most-populous country. The capital and largest city is Bangkok, a special administrative area. Thailand is bordered to the north by Myanmar and Laos, to the east by Laos and Cambodia, to the south by the Gulf of Thailand and Malaysia, and to the west by the Andaman Sea and the southern extremity of Myanmar. Its maritime boundaries include Vietnam in the Gulf of Thailand to the southeast, and Indonesia and India on the Andaman Sea to the southwest. Although nominally a constitutional monarchy and parliamentary democracy, the most recent coup in 2014 established a de facto military dictatorship.</p>
+</div>
+
+<div id="b22" class="containerTab" style="display:none;background:#11ADE3">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Saudi Arabia</h2>
+  <p>Saudi Arabia,[c] officially the Kingdom of Saudi Arabia,[d] is a sovereign state in Western Asia constituting the bulk of the Arabian Peninsula. With a land area of approximately 2,150,000 km2 (830,000 sq mi), Saudi Arabia is geographically the largest sovereign state in the Middle East, the second-largest in the Arab world (after Algeria), the fifth-largest in Asia, and the 12th-largest in the world. Saudi Arabia is bordered by Jordan and Iraq to the north, Kuwait to the northeast, Qatar, Bahrain, and the United Arab Emirates to the east, Oman to the southeast and Yemen to the south; it is separated from Israel and Egypt by the Gulf of Aqaba. It is the only nation with both a Red Sea coast and a Persian Gulf coast, and most of its terrain consists of arid desert, lowland and mountains. As of October 2018, the Saudi economy was the largest in the Middle East and the 18th largest in the world.[7] Saudi Arabia also has one of the world's youngest populations; 50 percent of its 33.4 million people are under 25 years old.[10]</p>
+</div>
+
+<div id="b23" class="containerTab" style="display:none;background:#BA8FF4">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Ghana</h2>
+  <p>Ghana (/ˈɡɑːnə/ (About this soundlisten)), officially the Republic of Ghana, is a country located along the Gulf of Guinea and Atlantic Ocean, in the subregion of West Africa. Spanning a land mass of 238,535 km2 (92,099 sq mi), Ghana is bordered by the Ivory Coast in the west, Burkina Faso in the north, Togo in the east and the Gulf of Guinea and Atlantic Ocean in the south. Ghana means "Warrior King" in the Soninke language. Ghana has many different tribes and languages. There are about eighty languages in Ghana.[11]</p>
+</div>
+
+<div id="b24" class="containerTab" style="display:none;background:#FF85B7">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Mali</h2>
+  <p>Mali (/ˈmɑːli/ (About this soundlisten); French pronunciation: ​[mali]), officially the Republic of Mali (French: République du Mali), is a landlocked country in West Africa. Mali is the eighth-largest country in Africa, with an area of just over 1,240,000 square kilometres (480,000 sq mi). The population of Mali is 18 million.[8] 67% of its population was estimated to be under the age of 25 in 2017.[9] Its capital is Bamako. The sovereign state of Mali consists of eight regions and its borders on the north reach deep into the middle of the Sahara Desert, while the country's southern part, where the majority of inhabitants live, features the Niger and Senegal rivers. The country's economy centers on agriculture and mining. Some of Mali's prominent natural resources include gold, being the third largest producer of gold in the African continent,[10] and salt.[11]
+</p>
+</div>
+
+<div id="b25" class="containerTab" style="display:none;background:#FF0067">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>South Africa</h2>
+  <p>South Africa is a country on the southernmost tip of the African continent, marked by several distinct ecosystems.South Africa has 11 official languages, including Zulu, Afrikaans, Xhosa and English. South Africa has the largest economy of any African country.</p>
+</div>
+
+<div id="b26" class="containerTab" style="display:none;background:#5EFF52">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Kenya</h2>
+  <p>Kenya (/ˈkɛnjə/ (About this soundlisten)), officially the Republic of Kenya (Swahili: Jamhuri ya Kenya), is a country in Africa with 47 semiautonomous counties governed by elected governors. At 580,367 square kilometres (224,081 sq mi), Kenya is the world's 48th largest country by total area. With a population of more than 52.2 million people, Kenya is the 27th most populous country.[10] Kenya's capital and largest city is Nairobi while its oldest city and first capital is the coastal city of Mombasa. Kisumu City is the third largest city and also an inland port on Lake Victoria. Other important urban centres include Nakuru and Eldoret.
+</p>
+</div>
+
+<div id="b27" class="containerTab" style="display:none;background:#006DC2">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Nigeria</h2>
+  <p>Nigeria, an African country on the Gulf of Guinea, has many natural landmarks and wildlife reserves.The capital of Nigeria is Abuja. Its also home to many different laguages such as English, Yoruba, Fulani, and Igbo.</p>
+</div>
+
+<div id="b28" class="containerTab" style="display:none;background:#79C4FF">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Ethiopia</h2>
+  <p>Ethiopia (/ˌiːθiˈoʊpiə/; Amharic: ኢትዮጵያ, ʾĪtyōṗṗyā, About this soundlisten (help·info), Tigrinya: ኢትዮጵያ, Oromo: Itoophiyaa, Somali: Itoobiya), officially the Federal Democratic Republic of Ethiopia (የኢትዮጵያ ፌዴራላዊ ዲሞክራሲያዊ ሪፐብሊክ, yeʾĪtiyoṗṗya Fēdēralawī Dēmokirasīyawī Rīpebilīk, About this soundlisten (help·info)), is a country in the northeastern part of Africa, known as the Horn of Africa. It shares borders with Eritrea to the north, Djibouti to the northeast, Somaliland and Somalia to the east, Kenya to the south, South Sudan to the west and Sudan to the northwest. With over 102 million inhabitants,[4] Ethiopia is the most populous landlocked country in the world and the second-most populous nation on the African continent with a total area of 1,100,000 square kilometres (420,000 sq mi). Its capital and largest city is Addis Ababa, which lies a few miles west of the East African Rift that splits the country into the Nubian and Somali tectonic plates.[9]</p>
+</div>
+
+<div id="b29" class="containerTab" style="display:none;background:#DFFF79">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Congo</h2>
+  <p>The Democratic Republic of the Congo (About this soundpronunciation (help·info) French: République démocratique du Congo [kɔ̃ɡo]), also known as DR Congo, the DRC, DROC,[6][7] Congo-Kinshasa, East Congo, or simply the Congo, is a country located in Central Africa. It is sometimes anachronistically referred to by its former name of Zaire, which was its official name between 1971 and 1997. It is, by area, the largest country in sub-Saharan Africa, the second-largest in all of Africa (after Algeria), and the 11th-largest in the world. With a population of over 78 million,[8] the Democratic Republic of the Congo is the most populous officially Francophone country, the fourth-most-populous country in Africa, and the 16th-most-populous country in the world. Eastern DR Congo has been the scene of ongoing military conflict in Kivu, since 2015.
+</p>
+</div>
+
+<div id="b30" class="containerTab" style="display:none;background:#FFABFA">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Australia</h2>
+  <p>Australia, officially the Commonwealth of Australia,[12] is a sovereign country comprising the mainland of the Australian continent, the island of Tasmania, and numerous smaller islands. It is the largest country in Oceania and the world's sixth-largest country by total area. The neighbouring countries are Papua New Guinea, Indonesia, and East Timor to the north; the Solomon Islands and Vanuatu to the north-east; and New Zealand to the south-east. The population of 25 million[6] is highly urbanised and heavily concentrated on the eastern seaboard.[13] Australia's capital is Canberra, and its largest city is Sydney. The country's other major metropolitan areas are Melbourne, Brisbane, Perth, and Adelaide.</p>
+</div>
+
+
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+
+</body>
+</html> 
